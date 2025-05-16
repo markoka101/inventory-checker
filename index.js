@@ -12,6 +12,7 @@ This kinda simulates a human clicking the refresh button and uses random timing
 */
 (async () => {
     //launching broswer and starting page
+    //if you want to see the browser set headleess to false, but it will take more resources
     const browser = await puppeteer.launch({
         headless: true,
     });
@@ -54,7 +55,7 @@ This kinda simulates a human clicking the refresh button and uses random timing
             }
         }
 
-        //if after checks button isn't found send alerts
+        //if after checks button isn't found send alerts and break out of loop
         if (!found) {
             noti.windowNotif();
             sendEmail.sendEmail();
@@ -62,7 +63,6 @@ This kinda simulates a human clicking the refresh button and uses random timing
         }
 
         // pause for 30 - 60 seconds
-        console.log("restarting");
         await new Promise((res) =>
             setTimeout(res, Math.floor(Math.random() * 60001) + 30000)
         );

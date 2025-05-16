@@ -8,6 +8,8 @@ Takes path to item on webpage and checks if it's currently in stock
 ## To run
 - Go to project repo
 - Create files mentioned in index.js and sendEmail.js and fill with necessary data
+- If it's the first time running input the following command into the terminal
+  - npm install
 - Run using the following command in the terminal
   - node index.js
 

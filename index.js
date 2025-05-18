@@ -53,11 +53,11 @@ Times can easily be adjusted, but I wouldn't recommend making it shorter
 
                 break;
             } else {
-                //reload page then pause for 3 to 7 seconds
+                //reload page then pause for 2 to 5 seconds
                 await page.reload();
 
                 await new Promise(
-                    (res) => setTimeout(res, Math.random() * 7001) + 3000
+                    (res) => setTimeout(res, Math.random() * 5001) + 2000
                 );
             }
         }
@@ -69,9 +69,9 @@ Times can easily be adjusted, but I wouldn't recommend making it shorter
             break;
         }
 
-        // pause for 30 - 60 seconds then reload page
+        // pause for 20 - 35 seconds then reload page
         await new Promise((res) =>
-            setTimeout(res, Math.floor(Math.random() * 60001) + 30000)
+            setTimeout(res, Math.floor(Math.random() * 35001) + 20000)
         );
         await page.reload();
     }
